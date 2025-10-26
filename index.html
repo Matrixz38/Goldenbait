@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<!-- saved from url=(0091)https://cdpn.io/cpe/boomboom/index.html?key=index.html-91961455-60ac-57ee-07c1-e78ad1fe68f6 -->
+<html lang="en" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <title>CodePen Demo</title>
+
+  <meta name="robots" content="noindex">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+  <link rel="canonical" href="https://codepen.io/Matrixz-the-scripter/pen/zxraqgz">
+
+  
+  
+
+  <style id="INLINE_PEN_STYLESHEET_ID">
+    body {
+  font-family: system-ui;
+  background: #f06d06;
+  color: white;
+  text-align: center;
+}
+  </style>
+
+  
+<script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.download"></script>
+<script src="./iframeConsoleRunner-6d8bf8b4b479137260842506acbb12717dace0823c023e08b96360e60b0840d9.js.download"></script>
+<script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.download"></script>
+<script src="./iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js.download"></script>
+</head>
+
+<body>
+  
+
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GoldenBait Capital - Strategic, secure investments designed for growth.">
+  <meta name="keywords" content="Investment, Cryptocurrency, Ethereum, Bitcoin, Gold, XAUUSD, Market Trends, Crypto News">
+  <title>GoldenBait Capital</title>
+  <link rel="stylesheet" href="./css">
+  <script src="./chart.js.download"></script>
+  <style>
+    :root {
+      --gold: #ffd700;
+      --gold-dark: #c1a100;
+      --blue: #007bff;
+      --bg-dark: #0b0b0f;
+      --surface-dark: #181824;
+      --surface-mid: #191921;
+      --surface-light: #222230;
+      --shadow: 0 8px 24px rgba(255,215,0,0.10);
+      --green: #27c77a;
+      --red: #ff5c5c;
+    }
+    html, body {margin:0; padding:0; font-family:'Poppins', sans-serif; scroll-behavior:smooth; background:var(--bg-dark); color:#eee;}
+    a {text-decoration:none;}
+    h1,h2,h3,p {margin:0 0 10px 0;}
+    .btn {
+      background:var(--gold); color:var(--bg-dark); padding:12px 28px; border-radius:8px;
+      font-weight:600; font-size:1.08rem; border:none; cursor:pointer; box-shadow:var(--shadow);
+      transition:all 0.27s cubic-bezier(.4,1.7,.6,1);
+      letter-spacing:0.01em;
+      outline:none;
+      position:relative;
+      z-index:1;
+    }
+    .btn:hover, .btn:focus {
+      background:#fff;
+      color:var(--bg-dark);
+      transform:scale(1.045);
+      box-shadow:0 6px 26px 0 rgba(255,215,0,0.22);
+    }
+    section {padding:80px 20px; text-align:center;}
+    .about-section, .features {background:var(--bg-dark);}
+    .plans-section, .reviews-section {background:var(--surface-dark);}
+    .about-section h2, .plans-section h2, .reviews-section h2, .features h2, .contact-section h2, .market-section h2 {
+      color:var(--gold); font-size:2.2rem; margin-bottom:38px; letter-spacing:0.01em;
+    }
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(120deg, var(--bg-dark) 55%, #1a1a27 100%);
+      color:white; min-height:100vh; display:flex; align-items:center; justify-content:center;
+      text-align:center; position:relative; overflow:hidden;
+      box-shadow:0 4px 32px 0 rgba(0,0,0,0.2);
+    }
+    .hero-content {animation:fadeIn 1.5s cubic-bezier(.2,1,.22,1) forwards;}
+    .hero h1 {font-size:3rem; margin-bottom:12px; color:var(--gold);}
+    .hero p {font-size:1.22rem; margin-bottom:24px; color:#ececec;}
+    .plans {display:flex; flex-wrap:wrap; justify-content:center; gap:26px;}
+    .plan-card {
+      background:var(--surface-mid); border-radius:14px; padding:38px 28px; width:300px;
+      box-shadow:var(--shadow); transition:transform 0.32s cubic-bezier(.41,1.8,.6,1);
+      border-top:5px solid var(--gold); cursor:pointer; margin-bottom:12px;
+      position:relative; z-index:1;
+    }
+    .plan-card:hover {transform:translateY(-10px) scale(1.03); box-shadow:0 18px 44px rgba(255,215,0,0.28);}
+    .plan-card.gold {border-top:5px solid var(--gold-dark);}
+    .plan-card.platinum {border-top:5px solid #c0c0c0;}
+    .plan-card h3 {color:var(--gold);}
+    .plan-card .price {font-weight:bold; font-size:1.22rem; margin-bottom:17px; color:#fff;}
+    .reviews {display:flex; flex-wrap:wrap; justify-content:center; gap:22px;}
+    .review-card {
+      background:var(--surface-mid); border-radius:12px; padding:26px 18px; width:270px;
+      box-shadow:0 5px 22px rgba(255,215,0,0.09); color:#ccc; transition:transform 0.29s ease;
+      font-size:1.07rem;
+    }
+    .review-card:hover {
+      transform:translateY(-9px) scale(1.03); box-shadow:0 17px 32px rgba(255,215,0,0.18);
+      background:var(--surface-light);
+    }
+    .review-card span {display:block; margin-top:13px; color:var(--gold); font-weight:600;}
+    .feature-grid {display:flex; flex-wrap:wrap; justify-content:center; gap:35px;}
+    .feature {
+      width:265px; text-align:center; background:var(--surface-mid); padding:28px 12px; border-radius:13px;
+      box-shadow:0 5px 17px rgba(255,215,0,0.07); transition:transform 0.29s cubic-bezier(.47,.2,.6,1.5);
+    }
+    .feature:hover {transform:translateY(-10px) scale(1.05); box-shadow:0 18px 35px rgba(255,215,0,0.19);}
+    .icon {font-size:2.7rem; margin-bottom:17px; color:var(--gold);}
+    .feature h3 {color:var(--gold);}
+    .feature p {color:#ddd;}
+    .contact-section a {color:var(--gold); font-weight:600;}
+    .modal {display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.85); align-items:center; justify-content:center;}
+    .modal-content {
+      background:var(--surface-mid); padding:35px; border-radius:13px; width:325px; position:relative;
+      box-shadow:0 9px 36px rgba(255,215,0,0.14);
+    }
+    .close {position:absolute; top:12px; right:18px; font-size:26px; cursor:pointer; color:var(--gold);}
+    .modal-content input, .modal-content textarea {
+      width:100%; padding:13px; margin:11px 0; border-radius:6px; border:none; background:var(--surface-light); color:#fff; font-size:1rem;
+    }
+    .modal-content input:focus, .modal-content textarea:focus {outline:2px solid var(--gold);}
+    .market-section {background:#101017;}
+    .market-overview {
+      display:flex; flex-wrap:wrap; gap:2%; justify-content:center; margin-bottom:20px;
+    }
+    .market-overview .asset {
+      width:30%; min-width:220px; background:var(--surface-mid); padding:18px 0 18px 0; border-radius:9px; margin-bottom:10px;
+      box-shadow:0 5px 18px rgba(255,215,0,0.07);
+      display:flex; flex-direction:column; align-items:center;
+      border:1.5px solid #23232c;
+    }
+    .market-overview h3 {margin:0 0 7px 0; color:var(--gold);}
+    .market-overview p {margin:5px 0;}
+    .market-overview .up {color:var(--green);}
+    .market-overview .down {color:var(--red);}
+    .chart-section {background:var(--surface-dark);}
+    #priceChart {background:var(--surface-mid); border-radius:12px; margin-top:30px;}
+    .market-trends {color:#ccc; margin-top:20px; font-size:1.15rem;}
+    footer {
+      background:var(--surface-dark); color:#aaa; text-align:center; padding:30px 20px;
+      font-size:1.05rem; letter-spacing:0.01em;
+    }
+    @keyframes fadeIn {0% {opacity:0; transform:translateY(24px);} 100% {opacity:1; transform:translateY(0);}}
+    @media(max-width:1100px){.plans,.feature-grid,.reviews,.market-overview{flex-direction:column; align-items:center;}}
+    @media(max-width:700px){
+      section {padding:55px 5px;}
+      .plan-card, .feature, .review-card, .market-overview .asset {width:93vw; min-width:0;}
+      .modal-content {width:98vw;}
+    }
+  </style>
+
+
+<div class="hero">
+  <div class="hero-content">
+    <h1 style="font-size: 6vw;">GoldenBait Capital</h1>
+    <p>Strategic, secure investments designed for growth.</p>
+    <a href="https://cdpn.io/cpe/boomboom/index.html?key=index.html-91961455-60ac-57ee-07c1-e78ad1fe68f6#plans" class="btn">View Plans</a>
+  </div>
+</div>
+
+<section id="about" class="about-section">
+  <h2>About Us</h2>
+  <p>GoldenBait Capital is a cutting-edge investment platform. Our focus is on sustainable growth, transparency, and strategic planning. With real-time market analytics, professional guidance, and a gold-standard user experience, we empower your wealth journey.</p>
+</section>
+
+<section id="plans" class="plans-section">
+  <h2>Investment Plans</h2>
+  <div class="plans">
+    <div class="plan-card" onclick="openForm(&#39;Starter&#39;)">
+      <h3>Starter</h3>
+      <p class="price">$400 - $5,000</p>
+      <p>Perfect for new investors seeking steady growth with minimal risk and 24/7 support.</p>
+      <a class="btn">Get Started</a>
+    </div>
+    <div class="plan-card gold" onclick="openForm(&#39;Gold&#39;)">
+      <h3>Gold</h3>
+      <p class="price">$5,001 - $50,000</p>
+      <p>Balanced portfolio, premium insights, and priority support for ambitious investors.</p>
+      <a class="btn">Get Started</a>
+    </div>
+    <div class="plan-card platinum" onclick="openForm(&#39;Platinum&#39;)">
+      <h3>Platinum</h3>
+      <p class="price">$50,001 - $200,000</p>
+      <p>Advanced strategies, dedicated advisor, exclusive analytics, and maximum returns.</p>
+      <a class="btn">Get Started</a>
+    </div>
+  </div>
+</section>
+
+<section class="market-section" id="market">
+  <h2>Market Overview</h2>
+  <div class="market-overview" id="live-market">
+    <div id="eth-price" class="asset">
+      <h3>Ethereum (ETH)</h3>
+      <p id="eth-price-value">$4,928</p>
+      <p id="eth-change"><span id="eth-change-val" class="up">+$128 (+2.67%)</span></p>
+    </div>
+    <div id="btc-price" class="asset">
+      <h3>Bitcoin (BTC)</h3>
+      <p id="btc-price-value">$111,472</p>
+      <p id="btc-change"><span id="btc-change-val" class="down">$1,528 (1.35%)</span></p>
+    </div>
+    <div id="xauusd-price" class="asset">
+      <h3>Gold (XAUUSD)</h3>
+      <p id="xauusd-price-value">$2,340</p>
+      <p id="xauusd-change"><span id="xauusd-change-val" class="down">$5 (0.21%)</span></p>
+    </div>
+  </div>
+  <div class="market-trends">
+    <h3 style="color:var(--gold);margin-bottom:7px;font-size:1.15em;">Market Trends</h3>
+    <p>The cryptocurrency and precious metals markets are experiencing significant volatility, with Ethereum, Bitcoin, and Gold showing promising growth. Analysts predict potential bullish trends in the coming weeks, influenced by increased institutional adoption, inflation hedges, and favorable global conditions.</p>
+  </div>
+</section>
+
+<section class="chart-section" id="price-chart">
+  <h2>Price Trends</h2>
+  <div style="height:350px; max-width:900px; margin:0 auto;">
+    <canvas id="priceChart" width="1125" height="400" style="display: block; box-sizing: border-box; height: 320px; width: 900px;"></canvas>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      let chart;
+      let chartLabels = [];
+      let btcPrices = [];
+      let ethPrices = [];
+      let xauusdPrices = [];
+      let prevBtc, prevEth, prevXau;
+
+      function formatTime(ts) {
+        const date = new Date(ts);
+        let h = date.getUTCHours(); h = h<10?'0'+h:h;
+        return `${date.getUTCMonth()+1}/${date.getUTCDate()} ${h}:00`;
+      }
+
+      async function fetchCoinGeckoHistory(id, days = 1) {
+        const url = `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=${days}&interval=hourly`;
+        const resp = await fetch(url);
+        const data = await resp.json();
+        return data.prices;
+      }
+
+      // For a fully real product, swap this to a live gold API (e.g. metals-api, fmp) and parse their JSON.
+      async function fetchGoldHistory(days = 1) {
+        // Simulate gold price for demo (looks real, but random walk)
+        let base = 2300, arr = [];
+        for (let h=0; h<25; ++h) {
+          base += (Math.random()-0.5)*4;
+          arr.push([Date.now()-((24-h)*3600*1000), Math.round(base*100)/100]);
+        }
+        return arr;
+      }
+
+      function updateAssetPrices() {
+        if (btcPrices.length) {
+          const last = btcPrices[btcPrices.length-1];
+          const prev = btcPrices[btcPrices.length-2] || last;
+          const change = last - prev;
+          const pct = prev ? (change/prev*100) : 0;
+          document.getElementById("btc-price-value").textContent = "$" + last.toLocaleString(undefined, {maximumFractionDigits:2});
+          document.getElementById("btc-change-val").textContent = `${change>=0?"+":""}$${Math.abs(change).toLocaleString(undefined,{maximumFractionDigits:2})} (${pct>=0?"+":""}${Math.abs(pct).toFixed(2)}%)`;
+          document.getElementById("btc-change-val").className = change>=0?"up":"down";
+        }
+        if (ethPrices.length) {
+          const last = ethPrices[ethPrices.length-1];
+          const prev = ethPrices[ethPrices.length-2] || last;
+          const change = last - prev;
+          const pct = prev ? (change/prev*100) : 0;
+          document.getElementById("eth-price-value").textContent = "$" + last.toLocaleString(undefined, {maximumFractionDigits:2});
+          document.getElementById("eth-change-val").textContent = `${change>=0?"+":""}$${Math.abs(change).toLocaleString(undefined,{maximumFractionDigits:2})} (${pct>=0?"+":""}${Math.abs(pct).toFixed(2)}%)`;
+          document.getElementById("eth-change-val").className = change>=0?"up":"down";
+        }
+        if (xauusdPrices.length) {
+          const last = xauusdPrices[xauusdPrices.length-1];
+          const prev = xauusdPrices[xauusdPrices.length-2] || last;
+          const change = last - prev;
+          const pct = prev ? (change/prev*100) : 0;
+          document.getElementById("xauusd-price-value").textContent = "$" + last.toLocaleString(undefined, {maximumFractionDigits:2});
+          document.getElementById("xauusd-change-val").textContent = `${change>=0?"+":""}$${Math.abs(change).toLocaleString(undefined,{maximumFractionDigits:2})} (${pct>=0?"+":""}${Math.abs(pct).toFixed(2)}%)`;
+          document.getElementById("xauusd-change-val").className = change>=0?"up":"down";
+        }
+      }
+
+      async function updateChartData() {
+        try {
+          const [btcHist, ethHist, goldHist] = await Promise.all([
+            fetchCoinGeckoHistory("bitcoin", 1),
+            fetchCoinGeckoHistory("ethereum", 1),
+            fetchGoldHistory(1)
+          ]);
+          chartLabels = btcHist.map(x => formatTime(x[0]));
+          btcPrices = btcHist.map(x => x[1]);
+          ethPrices = ethHist.map(x => x[1]);
+          xauusdPrices = goldHist.map(x => x[1]);
+          if (!chart) createChart();
+          else {
+            chart.data.labels = chartLabels;
+            chart.data.datasets[0].data = ethPrices;
+            chart.data.datasets[1].data = btcPrices;
+            chart.data.datasets[2].data = xauusdPrices;
+            chart.update();
+          }
+          updateAssetPrices();
+        } catch(e) {
+          chartLabels = ['Oct 1', 'Oct 5', 'Oct 10', 'Oct 15', 'Oct 20'];
+          btcPrices = [110000, 111000, 112000, 113000, 111472];
+          ethPrices = [4500, 4600, 4700, 4800, 4928];
+          xauusdPrices = [2300, 2320, 2335, 2345, 2340];
+          if (!chart) createChart();
+          else {
+            chart.data.labels = chartLabels;
+            chart.data.datasets[0].data = ethPrices;
+            chart.data.datasets[1].data = btcPrices;
+            chart.data.datasets[2].data = xauusdPrices;
+            chart.update();
+          }
+          updateAssetPrices();
+        }
+      }
+
+      function createChart() {
+        const ctx = document.getElementById('priceChart').getContext('2d');
+        chart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: chartLabels,
+            datasets: [
+              {
+                label: 'Ethereum (ETH)',
+                data: ethPrices,
+                borderColor: 'rgba(0, 123, 255, 1)',
+                backgroundColor: 'rgba(0, 123, 255, 0.05)',
+                tension: 0.38,
+                pointRadius: 2.6,
+                pointHoverRadius: 5.7,
+                borderWidth: 3,
+                fill: false
+              },
+              {
+                label: 'Bitcoin (BTC)',
+                data: btcPrices,
+                borderColor: 'rgba(255, 193, 7, 1)',
+                backgroundColor: 'rgba(255, 193, 7, 0.06)',
+                tension: 0.38,
+                pointRadius: 2.6,
+                pointHoverRadius: 5.7,
+                borderWidth: 3,
+                fill: false
+              },
+              {
+                label: 'Gold (XAUUSD)',
+                data: xauusdPrices,
+                borderColor: 'rgba(212, 175, 55, 1)',
+                backgroundColor: 'rgba(212, 175, 55, 0.07)',
+                tension: 0.38,
+                pointRadius: 2.6,
+                pointHoverRadius: 5.7,
+                borderWidth: 3,
+                fill: false
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {labels: {color: 'var(--gold)', font: {weight: 'bold', size:14}}},
+              tooltip: {
+                backgroundColor: '#222',
+                titleColor: 'var(--gold)',
+                bodyColor: '#fff',
+                borderColor: 'var(--gold)',
+                borderWidth: 1.5
+              }
+            },
+            scales: {
+              y: {
+                beginAtZero: false,
+                ticks: {color:'var(--gold)', font:{size:13}},
+                grid: {color: 'rgba(255,215,0,0.06)'}
+              },
+              x: {
+                ticks: {color:'var(--gold)', font:{size:13}},
+                grid: {color: 'rgba(255,215,0,0.03)'}
+              }
+            }
+          }
+        });
+      }
+      updateChartData();
+      setInterval(updateChartData, 60000);
+    });
+  </script>
+</section>
+
+<section id="reviews" class="reviews-section">
+  <h2>Customer Reviews</h2>
+  <div class="reviews">
+    <div class="review-card">
+      <p>"GoldenBait Capital’s platform looks and feels like a real fintech company. The live charts and plan options are just awesome!"</p>
+      <span>- Alex M.</span>
+    </div>
+    <div class="review-card">
+      <p>"The gold and dark mode design is beautiful, and I love seeing real market data in the dashboard."</p>
+      <span>- Priya K.</span>
+    </div>
+    <div class="review-card">
+      <p>"This site is perfect for learning how professional investment pages work. The UX is top-notch."</p>
+      <span>- Jamal R.</span>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <h2>Why Choose Us?</h2>
+  <div class="feature-grid">
+    <div class="feature">
+      <i class="icon">💼</i>
+      <h3>Expert Advisors</h3>
+      <p>Professional guidance tailored to your goals, powered by decades of industry experience.</p>
+    </div>
+    <div class="feature">
+      <i class="icon">🔒</i>
+      <h3>Secure &amp; Transparent</h3>
+      <p>Top-tier security, clear strategies, and client-first privacy for every investment plan.</p>
+    </div>
+    <div class="feature">
+      <i class="icon">📈</i>
+      <h3>Smart Growth</h3>
+      <p>Data-driven insights and analytics to maximize your long-term returns.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <h2>Get Started</h2>
+  <p>To learn more or start your investment journey, contact us at: <a href="mailto:lolcooker12@gmail.com">lolcooker12@gmail.com</a></p>
+</section>
+
+<div id="formModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close" onclick="closeForm()">×</span>
+    <h2 id="formTitle">Start the Starter Plan</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="First Name" required="">
+      <input type="text" placeholder="Last Name" required="">
+      <input type="email" placeholder="Email" required="">
+      <input type="tel" placeholder="Phone Number">
+      <textarea placeholder="Address"></textarea>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 GoldenBait Capital. Demo platform. For more information, contact <a href="mailto:lolcooker12@gmail.com">lolcooker12@gmail.com</a></p>
+</footer>
+
+<script>
+function openForm(plan) {
+  document.getElementById('formModal').style.display = 'flex';
+  document.getElementById('formTitle').innerText = `Start the ${plan} Plan`;
+}
+function closeForm() {document.getElementById('formModal').style.display = 'none';}
+function submitForm(e) {
+  e.preventDefault();
+  alert('Form submitted! Please contact lolcooker12@gmail.com with your details for onboarding.');
+  closeForm();
+}
+</script>
+
+
+  
+  <script src="./pen.js.download" crossorigin=""></script>
+
+
+</body></html>
